@@ -14,10 +14,19 @@ class TesMyModule(unittest.TestCase):
             expected_value
         )
     def test_add_integers_error_if_not_int(self):
-        pass
-    def test_assert_int_int_raises_no_error(self):
-        pass
-    def test_assert_int_non_int_raises_typeerror(self):
+        n1 = 3/8
+        n2 = 27/5
+        self.assertRaises(TypeError(
+            add_integers(n1, n2),
+            expected_value
+        ))
+
+        def test_assert_int_int_raises_no_error(self):
+            for n in range(-100, 101):
+                self.assertTrue(assert_int(1))
+
+
+    def test_assert_int_non_int_raises_typerror(self):
         pass
 
 if __name__ == '__main__':
